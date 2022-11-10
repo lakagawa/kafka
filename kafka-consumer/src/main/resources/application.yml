@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: 127.0.0.1:29092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: group_id
+      auto-offset-reset: earliest
+
+topic:
+  name:
+    consumer: fiap.scjr.teste
+
+auto:
+  create:
+    topic:
+      enable: true
